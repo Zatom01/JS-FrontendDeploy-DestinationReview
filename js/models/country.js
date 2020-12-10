@@ -11,13 +11,12 @@ class Country {
         this.countryLikes = countryLikes
         this.renderCountry()
 
+
     }
-
-    BASE_URL = 'https://rails-api-destination-review.herokuapp.com'
-
 
 
     countryHTML() {
+
         return `
             <img src="${this.image}" width ="100" /><br>
             <a href= "/countries/${this.id}"><h2 class="header">${this.name}</h2></a>
@@ -37,7 +36,7 @@ class Country {
 
     deleteCountry(e) {
         const id = parseInt(e.target.dataset.id)
-        fetch(BASE_URL + `/countries/${id}`, {
+        fetch(`https://rails-api-destination-review.herokuapp.com/countries/${id}`, {
             method: 'DELETE'
         })
             .then(() => {
@@ -48,7 +47,7 @@ class Country {
     static deleteReview(e) {
 
         const id = parseInt(e.target.dataset.id)
-        fetch(BASE_URL + `/reviews/${id}`, {
+        fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
             method: 'DELETE'
         })
             .then(() => {
@@ -67,7 +66,7 @@ class Country {
             'likes': new_likes
         }
 
-        fetch(BASE_URL + `/reviews/${id}`, {
+        fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -114,7 +113,7 @@ class Country {
                 'experience': updated_experience
             }
 
-            fetch(BASE_URL + `/reviews/${id}`, {
+            fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'
