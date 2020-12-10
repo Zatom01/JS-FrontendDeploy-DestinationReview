@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1 class="centerClass">List of Countries</h1>
+    <div id="container">
+        <div id="form">
+            <h3>New Country</h3>
+            <form id="country-form">
+                <input type="text" name="name" placeholder="name" />
+                <br><br>
+                <input type="text" name="continent" placeholder="continent" />
+                <br><br>
+                <input type="text" name="img" placeholder="image url">
+                <br><br>
+                <h3>Would you like to add a Review?</h3>
+                <input type="text" name="city" placeholder="city visited" /><br><br>
+                <input type="text" name="date" placeholder="date visited" /><br><br>
+                <input type="text" name="experience" class="inputBox" placeholder="experience" />
+                </textarea><br><br>
+                <input type="submit" value="Submit" class='btn btn-primary'>
+
+            </form>
+        </div>
+
+        <div id="country-container">
+
+        </div>
+    </div>
+
+
+
+
+</body>
+<script type="text/javascript" src="services/API.js"></script>
+<script type="text/javascript" src="js/models/country.js"></script>
+<script type="text/javascript" src="src/index.js"></script>
+
+
+
+</html>

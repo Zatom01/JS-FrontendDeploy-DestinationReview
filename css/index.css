@@ -1,0 +1,49 @@
+h1.centerClass {
+    text-align: center;
+    color: limegreen
+
+}
+
+#container {
+    width: 1279px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.country-card {
+    float: left;
+    width: 350px;
+    height: 250px;
+    background-color: yellow ;
+    color: blue;
+    margin: 15px;
+    text-align: center;
+}
+
+.review-card {
+    float: left;
+    width: 350px;
+    height: 450px;
+    background-color: yellow ;
+    color: blue;
+    margin: 15px;
+    text-align: center;
+}
+
+.inputBox{
+    width: 500px;
+    height:100px;
+}
+
+.like-value{
+    font-size: x-large;
+    color: purple;
+}
