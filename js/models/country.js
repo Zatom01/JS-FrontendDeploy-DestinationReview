@@ -13,6 +13,8 @@ class Country {
 
     }
 
+    BASE_URL = 'https://rails-api-destination-review.herokuapp.com'
+
 
 
     countryHTML() {
@@ -35,7 +37,7 @@ class Country {
 
     deleteCountry(e) {
         const id = parseInt(e.target.dataset.id)
-        fetch(`http://localhost:3000/countries/${id}`, {
+        fetch(BASE_URL + `/countries/${id}`, {
             method: 'DELETE'
         })
             .then(() => {
@@ -46,7 +48,7 @@ class Country {
     static deleteReview(e) {
 
         const id = parseInt(e.target.dataset.id)
-        fetch(`http://localhost:3000/reviews/${id}`, {
+        fetch(BASE_URL + `/reviews/${id}`, {
             method: 'DELETE'
         })
             .then(() => {
@@ -65,7 +67,7 @@ class Country {
             'likes': new_likes
         }
 
-        fetch(`http://localhost:3000/reviews/${id}`, {
+        fetch(BASE_URL + `/reviews/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -112,7 +114,7 @@ class Country {
                 'experience': updated_experience
             }
 
-            fetch(`http://localhost:3000/reviews/${id}`, {
+            fetch(BASE_URL + `/reviews/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'

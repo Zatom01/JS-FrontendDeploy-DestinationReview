@@ -1,7 +1,9 @@
 class API {
 
+    BASE_URL = 'https://rails-api-destination-review.herokuapp.com'
+
     static addCountrys() {
-        fetch("http://localhost:3000/countries")
+        fetch(BASE_URL + "/countries")
             .then(resp => resp.json())
             .then(countries => {
                 countries.forEach(country => {
@@ -30,7 +32,7 @@ class API {
 
         }
 
-        fetch("http://localhost:3000/countries", {
+        fetch(BASE_URL + "/countries", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -50,7 +52,7 @@ class API {
 
     static postReviews(id) {
 
-        fetch(`http://localhost:3000/countries/${id}`)
+        fetch(BASE_URL + `/countries/${id}`)
             .then(resp => resp.json())
             .then(data => {
                 const reviewsArray = data.reviews
@@ -77,7 +79,7 @@ class API {
             "country_id": country_id
         }
 
-        fetch("http://localhost:3000/reviews", {
+        fetch(BASE_URL + "/reviews", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
