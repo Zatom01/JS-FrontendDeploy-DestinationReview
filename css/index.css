@@ -1,49 +1,56 @@
-h1.centerClass {
-    text-align: center;
-    color: limegreen
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  opacity: 0.3;
+}
 
+h1.centerClass {
+  text-align: center;
+  color: limegreen;
 }
 
 #container {
-    width: 1279px;
-    margin: auto;
-    margin-top: 50px;
+  width: 1279px;
+  margin: auto;
+  margin-top: 50px;
 }
 
-
-#form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .country-card {
-    float: left;
-    width: 350px;
-    height: 250px;
-    background-color: yellow ;
-    color: blue;
-    margin: 15px;
-    text-align: center;
+  float: left;
+  width: 350px;
+  height: 250px;
+  background-color: yellow;
+  color: blue;
+  margin: 15px;
+  text-align: center;
 }
 
 .review-card {
-    float: left;
-    width: 350px;
-    height: 450px;
-    background-color: yellow ;
-    color: blue;
-    margin: 15px;
-    text-align: center;
+  float: left;
+  width: 350px;
+  height: 450px;
+  background-color: yellow;
+  color: blue;
+  margin: 15px;
+  text-align: center;
 }
 
-.inputBox{
-    width: 500px;
-    height:100px;
+.inputBox {
+  width: 500px;
+  height: 100px;
 }
 
-.like-value{
-    font-size: x-large;
-    color: purple;
+.like-value {
+  font-size: x-large;
+  color: purple;
 }
