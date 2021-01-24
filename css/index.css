@@ -12,7 +12,7 @@ h1.centerClass {
   color: limegreen;
 }
 
-#container {
+.container {
   width: 100%;
   margin: auto;
 
@@ -59,4 +59,22 @@ h1.centerClass {
 .like-value {
   font-size: x-large;
   color: purple;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container #form {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container #form {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container #form {
+    margin-bottom: 2rem;
+  }
 }
