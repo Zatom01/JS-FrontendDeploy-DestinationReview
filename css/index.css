@@ -13,9 +13,13 @@ h1.centerClass {
 }
 
 #container {
-  width: 1279px;
+  width: 100%;
   margin: auto;
-  margin-top: 50px;
+
+  background-image: url("../images/img-2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 #form {
