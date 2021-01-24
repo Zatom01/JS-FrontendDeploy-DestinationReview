@@ -20,6 +20,7 @@ h1.centerClass {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  background-size: cover;
 }
 
 #form {
@@ -37,6 +38,7 @@ h1.centerClass {
   color: blue;
   margin: 15px;
   text-align: center;
+  overflow: auto;
 }
 
 .review-card {
