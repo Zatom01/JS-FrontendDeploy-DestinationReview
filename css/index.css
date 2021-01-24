@@ -49,6 +49,7 @@ h1.centerClass {
   color: blue;
   margin: 15px;
   text-align: center;
+  overflow: auto;
 }
 
 .inputBox {
