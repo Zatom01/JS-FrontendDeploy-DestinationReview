@@ -1,4 +1,7 @@
+
+
 class Country {
+
 
     static all = []
 
@@ -10,9 +13,14 @@ class Country {
         this.image = image
         this.countryLikes = countryLikes
         this.renderCountry()
+        this.url = "https://rails-api-destination-review.herokuapp.com"
 
 
     }
+
+
+
+
 
 
     countryHTML() {
@@ -36,7 +44,7 @@ class Country {
 
     deleteCountry(e) {
         const id = parseInt(e.target.dataset.id)
-        fetch(`https://rails-api-destination-review.herokuapp.com/countries/${id}`, {
+        fetch(`${this.url}/countries/${id}`, {
             method: 'DELETE'
         })
             .then(() => {
@@ -47,7 +55,7 @@ class Country {
     static deleteReview(e) {
 
         const id = parseInt(e.target.dataset.id)
-        fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
+        fetch(`${this.url}/reviews/${id}`, {
             method: 'DELETE'
         })
             .then(() => {
@@ -66,7 +74,7 @@ class Country {
             'likes': new_likes
         }
 
-        fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
+        fetch(`${this.url}/reviews/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -113,7 +121,7 @@ class Country {
                 'experience': updated_experience
             }
 
-            fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
+            fetch(`${this.url}/reviews/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'
