@@ -1,7 +1,6 @@
 
-
+//
 class Country {
-
 
     static all = []
 
@@ -13,15 +12,9 @@ class Country {
         this.image = image
         this.countryLikes = countryLikes
         this.renderCountry()
-        this.url = "https://rails-api-destination-review.herokuapp.com"
-
-
+        this.url = "http://localhost:3000"
+        // this.url = "https://rails-api-destination-review.herokuapp.com"
     }
-
-
-
-
-
 
     countryHTML() {
 
@@ -30,8 +23,8 @@ class Country {
             <a href= "/countries/${this.id}"><h2 class="header">${this.name}</h2></a>
             <p>${this.continent}</p>
             <h4 class="countryLikeValue">${this.countryLikes}</h4>
-            <button class="country-like">Like ? </button><br><br>
-            <button class="delete" data-id="${this.id}"> DELETE ? </button><br><br>
+            <button class="country-like"><i class="fas fa-thumbs-up"></i> ?</button><br><br>
+            <button class="delete" data-id="${this.id}"> <i class="fas fa-trash-alt"></i> ? </button><br><br>
         `
     }
 
@@ -44,7 +37,7 @@ class Country {
 
     deleteCountry(e) {
         const id = parseInt(e.target.dataset.id)
-        fetch(`${this.url}/countries/${id}`, {
+        fetch(`${this.url}/${id}`, {
             method: 'DELETE'
         })
             .then(() => {
@@ -86,7 +79,6 @@ class Country {
     }
 
     static updateReview(e) {
-        debugger
         const id = parseInt(e.target.dataset.id)
         const city_visited = e.target.parentElement.querySelector(".city").innerText
         const date_visited = e.target.parentElement.querySelector(".date").innerText
@@ -213,9 +205,9 @@ class Country {
             <p class="date">${date_visited}</p>
             <p class="experience">${experience}</p>
             <p class="like-value">${likes}</p>
-            <button class="likes" data-id="${id}"> LIKE ME ? </button><br><br>
-            <button class="delete" data-id="${id}"> DELETE ? </button><br><br>
-            <button class="update" data-id="${id}"> UPDATE ? </button>
+            <button class="likes" data-id="${id}"> <i class="fas fa-thumbs-up"></i> ? </button><br><br>
+            <button class="delete" data-id="${id}"><i class="fas fa-trash-alt"></i> ?</button><br><br>
+            <button class="update" data-id="${id}"> <i class="far fa-edit"></i> ? </button>
 
         `
 

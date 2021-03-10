@@ -1,9 +1,9 @@
 class API {
 
-
-
     static addCountrys() {
-        fetch("https://rails-api-destination-review.herokuapp.com/countries")
+        let url = "http://localhost:3000"
+        // let url= "https://rails-api-destination-review.herokuapp.com"
+        fetch(`${url}/countries`)
             .then(resp => resp.json())
             .then(countries => {
                 countries.forEach(country => {
@@ -15,6 +15,8 @@ class API {
 
 
     static addCountry(e) {
+        let url = "http://localhost:3000"
+        // let url= "https://rails-api-destination-review.herokuapp.com"
 
         e.preventDefault()
         let data = {
@@ -32,7 +34,7 @@ class API {
 
         }
 
-        fetch("https://rails-api-destination-review.herokuapp.com/countries", {
+        fetch(`${url}/countries`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -51,8 +53,10 @@ class API {
 
 
     static postReviews(id) {
+        let url = "http://localhost:3000"
+        // let url= "https://rails-api-destination-review.herokuapp.com"
 
-        fetch(`https://rails-api-destination-review.herokuapp.com/countries/${id}`)
+        fetch(`${url}/countries/${id}`)
             .then(resp => resp.json())
             .then(data => {
                 const reviewsArray = data.reviews
@@ -71,6 +75,8 @@ class API {
     }
 
     static createNewReview(country_id, city_visited, date_visited, experience) {
+        let url = "http://localhost:3000"
+        // let url= "https://rails-api-destination-review.herokuapp.com"
 
         let data = {
             "city_visited": city_visited,
@@ -79,7 +85,7 @@ class API {
             "country_id": country_id
         }
 
-        fetch("https://rails-api-destination-review.herokuapp.com/reviews", {
+        fetch(`${url}/reviews`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
