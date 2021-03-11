@@ -1,8 +1,8 @@
 class API {
 
     static addCountrys() {
-        let url = "http://localhost:3000"
-        // let url= "https://rails-api-destination-review.herokuapp.com"
+        // let url = "http://localhost:3000"
+        let url= "https://rails-api-destination-review.herokuapp.com"
         fetch(`${url}/countries`)
             .then(resp => resp.json())
             .then(countries => {
@@ -15,8 +15,8 @@ class API {
 
 
     static addCountry(e) {
-        let url = "http://localhost:3000"
-        // let url= "https://rails-api-destination-review.herokuapp.com"
+        // let url = "http://localhost:3000"
+        let url= "https://rails-api-destination-review.herokuapp.com"
 
         e.preventDefault()
         let data = {
@@ -53,8 +53,8 @@ class API {
 
 
     static postReviews(id) {
-        let url = "http://localhost:3000"
-        // let url= "https://rails-api-destination-review.herokuapp.com"
+        // let url = "http://localhost:3000"
+        let url= "https://rails-api-destination-review.herokuapp.com"
 
         fetch(`${url}/countries/${id}`)
             .then(resp => resp.json())
@@ -75,8 +75,8 @@ class API {
     }
 
     static createNewReview(country_id, city_visited, date_visited, experience) {
-        let url = "http://localhost:3000"
-        // let url= "https://rails-api-destination-review.herokuapp.com"
+        // let url = "http://localhost:3000"
+        let url= "https://rails-api-destination-review.herokuapp.com"
 
         let data = {
             "city_visited": city_visited,

@@ -12,8 +12,8 @@ class Country {
         this.image = image
         this.countryLikes = countryLikes
         this.renderCountry()
-        this.url = "http://localhost:3000"
-        // this.url = "https://rails-api-destination-review.herokuapp.com"
+        // this.url = "http://localhost:3000"
+        this.url = "https://rails-api-destination-review.herokuapp.com"
     }
 
     countryHTML() {
