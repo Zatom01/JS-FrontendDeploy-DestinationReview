@@ -42,8 +42,8 @@ h1.centerClass {
 
 .country-card {
   float: left;
-  width: 350px;
-  height: 250px;
+  width: 150px;
+  height: 300px;
   background-color: yellow;
   color: blue;
   margin: 15px;
@@ -53,8 +53,8 @@ h1.centerClass {
 
 .review-card {
   float: left;
-  width: 350px;
-  height: 450px;
+  width: 250px;
+  height: 400px;
   background-color: yellow;
   color: blue;
   margin: 15px;
