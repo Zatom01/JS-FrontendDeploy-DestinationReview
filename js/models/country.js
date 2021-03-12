@@ -4,7 +4,7 @@ class Country {
 
     static all = []
 
-    constructor(id, name, continent, image, countryLikes = 0) {
+    constructor(id, name, continent, image, countryLikes) {
 
         this.id = id
         this.name = name
@@ -57,7 +57,6 @@ class Country {
     }
 
     static updateReviewLikes(e) {
-
         let id = parseInt(e.target.dataset.id)
         let likes = parseInt(e.target.parentElement.querySelector('.like-value').innerText)
         let new_likes = likes + 1
@@ -67,16 +66,16 @@ class Country {
             'likes': new_likes
         }
 
-        fetch(`${this.url}/reviews/${id}`, {
-            method: 'PATCH',
+        // fetch(`http://localhost:3000/reviews/${id}`,{
+        fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`,{
+            method: "PATCH",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(likeData)
-        })
-            .then(resp => resp.json())
-
+        }).then(resp => resp.json())
     }
+
 
     static updateReview(e) {
         const id = parseInt(e.target.dataset.id)
@@ -136,17 +135,29 @@ class Country {
         countryCard.addEventListener("click", e => {
             if (e.target.className.includes("delete")) { this.deleteCountry(e) }
             if (e.target.className.includes("header")) { this.showCountry(e, countryCard.id) }
-            if (e.target.className.includes("country-like")) { this.updateCountryLike(e) }
+            if (e.target.className.includes("country-like")) { this.updateCountryLike(e, this.id) }
         })
     }
 
 
-    updateCountryLike(e) {
+    updateCountryLike(e,id) {
 
-        let initialLike = this.countryLikes
         let htmlLike = parseInt(e.target.parentElement.querySelector('.countryLikeValue').innerText)
         let new_likes = htmlLike + 1
         e.target.parentElement.querySelector('.countryLikeValue').innerText = new_likes
+        let updatedLikes = {
+            likes: new_likes
+        }
+
+        fetch(`${this.url}/countries/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedLikes)
+        })
+            .then(resp => resp.json())
+
 
 
     }

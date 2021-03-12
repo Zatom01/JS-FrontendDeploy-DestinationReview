@@ -7,8 +7,8 @@ class API {
             .then(resp => resp.json())
             .then(countries => {
                 countries.forEach(country => {
-                    const { id, name, continent, image } = country //mass assignment
-                    new Country(id, name, continent, image)
+                    const { id, name, continent, image, likes } = country //mass assignment
+                    new Country(id, name, continent, image,likes)
                 })
             })
     }
