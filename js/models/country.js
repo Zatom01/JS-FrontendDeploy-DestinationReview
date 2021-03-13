@@ -175,9 +175,8 @@ class Country {
                 <h3>Would you like to add a Review for this country?</h3>
                 <input type="text" name="city" placeholder="City visited" /><br><br>
                 <input type="text" name="date" placeholder="Date visited" /><br><br>
-                <textarea cols="30" rows="10" name="experience" class="inputBox" placeholder="Experience">
-                </textarea><br><br>
-
+                <textarea name="experience" class="inputBox" placeholder="Experience" cols="30" rows="10"></textarea>
+                <br><br>
                 <input type="submit" value="submit" class='btn btn-primary'>
             </form>
 
