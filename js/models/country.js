@@ -37,7 +37,7 @@ class Country {
 
     deleteCountry(e) {
         const id = parseInt(e.target.dataset.id)
-        fetch(`${this.url}/${id}`, {
+        fetch(`${this.url}/countries/${id}`, {
             method: 'DELETE'
         })
             .then(() => {
@@ -48,7 +48,8 @@ class Country {
     static deleteReview(e) {
 
         const id = parseInt(e.target.dataset.id)
-        fetch(`${this.url}/reviews/${id}`, {
+        // fetch(`http://localhost:3000/reviews/${id}`, {
+        fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
             method: 'DELETE'
         })
             .then(() => {
@@ -92,7 +93,7 @@ class Country {
                     <br><br>
                     <input type="text" name="date" placeholder="Date visited" />
                     <br><br>
-                    <input class="inputBox" type="text" name="experience" placeholder="Experience">
+                    <input class="inputBox" name="experience" placeholder="Experience">
                     <br><br>
                     <input type="submit" value="Update" class='btn btn-primary'>
                 </form>
@@ -112,7 +113,8 @@ class Country {
                 'experience': updated_experience
             }
 
-            fetch(`${this.url}/reviews/${id}`, {
+            // fetch(`http://localhost:3000/reviews/${id}`, {
+            fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'
@@ -140,7 +142,7 @@ class Country {
     }
 
 
-    updateCountryLike(e,id) {
+    updateCountryLike(e) {
 
         let htmlLike = parseInt(e.target.parentElement.querySelector('.countryLikeValue').innerText)
         let new_likes = htmlLike + 1
@@ -149,7 +151,7 @@ class Country {
             likes: new_likes
         }
 
-        fetch(`${this.url}/countries/${id}`, {
+        fetch(`${this.url}/countries/${this.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
