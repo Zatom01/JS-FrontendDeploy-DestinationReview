@@ -4,7 +4,7 @@ class Country {
 
     static all = []
 
-    constructor(id, name, continent, image, countryLikes) {
+    constructor(id, name, continent, image, countryLikes=0) {
 
         this.id = id
         this.name = name
@@ -135,7 +135,7 @@ class Country {
         countryCard.addEventListener("click", e => {
             if (e.target.className.includes("delete")) { this.deleteCountry(e) }
             if (e.target.className.includes("header")) { this.showCountry(e, countryCard.id) }
-            if (e.target.className.includes("country-like")) { this.updateCountryLike(e, this.id) }
+            if (e.target.className.includes("country-like")) { this.updateCountryLike(e) }
         })
     }
 
@@ -173,10 +173,11 @@ class Country {
             <form id="review-form">
                 <h3 class="countryId">${country_id}</h3>
                 <h3>Would you like to add a Review for this country?</h3>
-                <input type="text" name="city" placeholder="City Visited" /><br><br>
-                <input type="text" name="date" placeholder="Date Visited" /><br><br>
-                <textarea name="experience" class="inputBox" placeholder="Experience" cols="30" rows="10"></textarea><br><br>
-                <input type="submit" value="Submit" class='btn btn-primary'>
+                <input type="text" name="city" placeholder="city visited" /><br><br>
+                <input type="text" name="date" placeholder="date visited" /><br><br>
+                <input type="text" name="experience" class="inputBox" placeholder="experience" />
+                </textarea><br><br>
+                <input type="submit" value="submit" class='btn btn-primary'>
             </form>
 
             `

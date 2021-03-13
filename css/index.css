@@ -3,6 +3,10 @@ h1.centerClass {
   color: limegreen;
 }
 
+h3 {
+  text-align: center;
+}
+
 .navbar {
   /* background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%); */
   background-color: black;
@@ -34,9 +38,10 @@ h1.centerClass {
 }
 
 #form {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   text-align: center;
 }
 
