@@ -1,10 +1,35 @@
+body,
+html {
+  height: 100%;
+}
+
 h1.centerClass {
   text-align: center;
-  color: cyan;
+  color: rgb(239, 255, 8);
+}
+
+h2.header {
+  color: rgb(255, 238, 7);
 }
 
 h3 {
   text-align: center;
+  color: rgb(239, 255, 8);
+}
+p {
+  color: rgb(8, 88, 238);
+}
+
+.home-button {
+  display: flex;
+  justify-content: left;
+  color: rgb(8, 210, 224);
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  position: fixed;
+}
+.home-button:hover {
+  background-color: rgb(255, 238, 7);
 }
 
 .navbar {
@@ -27,6 +52,7 @@ h3 {
 }
 
 .container {
+  /* height: 100vh; */
   width: 100%;
   margin: auto;
 
@@ -35,6 +61,7 @@ h3 {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  border-radius: 15px 50px 30px;
 }
 
 #form {
@@ -49,22 +76,24 @@ h3 {
   float: left;
   width: 150px;
   height: 300px;
-  background-color: cyan;
-  color: blue;
+  background-color: rgb(11, 230, 211);
+  color: white;
   margin: 15px;
   text-align: center;
   overflow: auto;
+  border-radius: 15px 50px 30px;
 }
 
 .review-card {
   float: left;
   width: 250px;
   height: 400px;
-  background-color: yellow;
-  color: blue;
+  background-color: rgb(11, 230, 211);
+  color: rgb(239, 255, 8);
   margin: 15px;
   text-align: center;
   overflow: auto;
+  border-radius: 15px 50px 30px;
 }
 
 .inputBox {
