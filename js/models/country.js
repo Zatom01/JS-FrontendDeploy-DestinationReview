@@ -173,10 +173,11 @@ class Country {
             <form id="review-form">
                 <h3 class="countryId">${country_id}</h3>
                 <h3>Would you like to add a Review for this country?</h3>
-                <input type="text" name="city" placeholder="city visited" /><br><br>
-                <input type="text" name="date" placeholder="date visited" /><br><br>
-                <input type="text" name="experience" class="inputBox" placeholder="experience" />
+                <input type="text" name="city" placeholder="City visited" /><br><br>
+                <input type="text" name="date" placeholder="Date visited" /><br><br>
+                <textarea cols="30" rows="10" name="experience" class="inputBox" placeholder="Experience">
                 </textarea><br><br>
+
                 <input type="submit" value="submit" class='btn btn-primary'>
             </form>
 
