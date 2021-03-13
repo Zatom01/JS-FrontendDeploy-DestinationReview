@@ -33,22 +33,39 @@ class API {
 
 
         }
-
-        fetch(`${url}/countries`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
-
-            .then(resp => resp.json())
-            .then(country => {
-                const { id, name, continent, image } = country
-                new Country(id, name, continent, image)
-                document.getElementById('country-form').reset()
-
+            fetch(`${url}/countries`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
             })
+
+                .then(resp => resp.json())
+
+
+                .then( function(resp){
+
+                    if(resp.ok){
+                        country => {
+                            const { id, name, continent, image } = country
+                            new Country(id, name, continent, image)
+                            document.getElementById('country-form').reset()
+                        }
+
+                    }
+                    else{throw new Error("Country already exists!")}
+
+                }
+                ).catch(alert);
+            //     )
+
+
+
+
+
+
+
     }
 
 
