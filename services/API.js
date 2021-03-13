@@ -47,17 +47,19 @@ class API {
                 .then( function(resp){
 
                     if(resp.ok){
+
                         country => {
                             const { id, name, continent, image } = country
                             new Country(id, name, continent, image)
                             document.getElementById('country-form').reset()
+
                         }
 
                     }
-                    else{throw new Error("Country already exists!")}
+                    location.reload()
 
                 }
-                ).catch(alert);
+                )
             //     )
 
 
