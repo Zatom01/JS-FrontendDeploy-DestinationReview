@@ -89,11 +89,11 @@ class Country {
             <h1 class="centerClass">Update Review</h1>
             <div id ="form">
                 <form id="edit-form">
-                    <input type="text" name="city" placeholder="City visited" />
+                    <input class="input__boxes" type="text" name="city" placeholder="City visited" />
                     <br><br>
-                    <input type="text" name="date" placeholder="Date visited" />
+                    <input class="input__boxes" type="text" name="date" placeholder="Date visited" />
                     <br><br>
-                    <input class="inputBox" name="experience" placeholder="Experience">
+                    <input class="textarea__boxes" class="inputBox" name="experience" placeholder="Experience">
                     <br><br>
                     <input type="submit" value="Update" class='btn btn-primary'>
                 </form>
@@ -175,9 +175,9 @@ class Country {
             <form id="review-form">
                 <h3 class="countryId">${country_id}</h3>
                 <h3>Would you like to add a Review for this country?</h3>
-                <input type="text" name="city" placeholder="City visited" /><br><br>
-                <input type="text" name="date" placeholder="Date visited" /><br><br>
-                <textarea name="experience" class="inputBox" placeholder="Experience" cols="30" rows="10"></textarea>
+                <input class="input__boxes" type="text" name="city" placeholder="City visited" /><br><br>
+                <input class="input__boxes"  type="text" name="date" placeholder="Date visited" /><br><br>
+                <input class="textarea__boxes" type="text" name="experience" class="inputBox" placeholder="Experience"></textarea>
                 <br><br>
                 <input type="submit" value="submit" class='btn btn-primary'>
             </form>
