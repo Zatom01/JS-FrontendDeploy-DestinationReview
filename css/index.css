@@ -93,8 +93,8 @@ p {
 }
 .country-card {
   float: left;
-  width: 150px;
-  height: 300px;
+  width: 170px;
+  height: 350px;
   /* background-color: rgb(11, 230, 211); */
   background-color: #21f006;
   color: white;
