@@ -54,6 +54,12 @@ class Country {
         })
     }
 
+    confirm(){
+        return confirm("Are you sure? ")
+        debugger
+    }
+
+
     static deleteReview(e) {
 
         const id = parseInt(e.target.dataset.id)
@@ -237,7 +243,10 @@ class Country {
         reviewCard.innerHTML += newHTML
         countryContainer.appendChild(reviewCard)
         reviewCard.addEventListener("click", e => {
-            if (e.target.className.includes("delete")) { this.deleteReview(e) }
+            if (e.target.className.includes("delete")) {
+
+                this.confirm(e)
+                this.deleteReview(e) }
             if (e.target.className.includes("likes")) { this.updateReviewLikes(e) }
             if (e.target.className.includes("update")) { this.updateReview(e) }
         })
