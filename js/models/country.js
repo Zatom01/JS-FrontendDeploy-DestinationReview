@@ -45,9 +45,9 @@ class Country {
             })
     }
 
-    changeColor(e){
-        const id = parseInt(e.target.dataset.id)
-        debugger
+    changeColor(){
+        const id = parseInt(event.target.id)
+        document.getElementById(id).style.background = 'pink'
     }
 
     static deleteReview(e) {
