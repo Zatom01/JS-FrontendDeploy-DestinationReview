@@ -47,7 +47,11 @@ class Country {
 
     changeColor(){
         const id = parseInt(event.target.id)
+        const originalColor = "#21f006"
         document.getElementById(id).style.background = 'pink'
+        document.getElementById(id).addEventListener("click", e=> {
+            document.getElementById(id).style.background = originalColor
+        })
     }
 
     static deleteReview(e) {
