@@ -12,8 +12,8 @@ class Country {
         this.image = image
         this.countryLikes = countryLikes
         this.renderCountry()
-        // this.url = "http://localhost:3000"
-        this.url = "https://rails-api-destination-review.herokuapp.com"
+        this.url = "http://localhost:3000"
+        // this.url = "https://rails-api-destination-review.herokuapp.com"
     }
 
     countryHTML() {
@@ -45,11 +45,16 @@ class Country {
             })
     }
 
+    changeColor(e){
+        const id = parseInt(e.target.dataset.id)
+        debugger
+    }
+
     static deleteReview(e) {
 
         const id = parseInt(e.target.dataset.id)
-        // fetch(`http://localhost:3000/reviews/${id}`, {
-        fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
+        fetch(`http://localhost:3000/reviews/${id}`, {
+        // fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
             method: 'DELETE'
         })
             .then(() => {
@@ -67,8 +72,8 @@ class Country {
             'likes': new_likes
         }
 
-        // fetch(`http://localhost:3000/reviews/${id}`,{
-        fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`,{
+        fetch(`http://localhost:3000/reviews/${id}`,{
+        // fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`,{
             method: "PATCH",
             headers: {
                 'Content-Type': 'application/json'
@@ -113,8 +118,8 @@ class Country {
                 'experience': updated_experience
             }
 
-            // fetch(`http://localhost:3000/reviews/${id}`, {
-            fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
+            fetch(`http://localhost:3000/reviews/${id}`, {
+            // fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'
@@ -138,6 +143,7 @@ class Country {
             if (e.target.className.includes("delete")) { this.deleteCountry(e) }
             if (e.target.className.includes("header")) { this.showCountry(e, countryCard.id) }
             if (e.target.className.includes("country-like")) { this.updateCountryLike(e) }
+            else {this.changeColor(e)}
         })
     }
 
