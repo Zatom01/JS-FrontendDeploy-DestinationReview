@@ -54,9 +54,8 @@ class Country {
         })
     }
 
-    confirm(){
-        return confirm("Are you sure? ")
-        debugger
+    check(){
+        confirm("Are you sure? ")
     }
 
 
@@ -245,8 +244,8 @@ class Country {
         reviewCard.addEventListener("click", e => {
             if (e.target.className.includes("delete")) {
 
-                this.confirm(e)
-                this.deleteReview(e) }
+                if(this.check() == true){this.deleteReview(e)}
+            }
             if (e.target.className.includes("likes")) { this.updateReviewLikes(e) }
             if (e.target.className.includes("update")) { this.updateReview(e) }
         })
