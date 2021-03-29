@@ -12,8 +12,8 @@ class Country {
         this.image = image
         this.countryLikes = countryLikes
         this.renderCountry()
-        this.url = "http://localhost:3000"
-        // this.url = "https://rails-api-destination-review.herokuapp.com"
+        // this.url = "http://localhost:3000"
+        this.url = "https://rails-api-destination-review.herokuapp.com"
     }
 
     countryHTML() {
@@ -63,8 +63,8 @@ class Country {
     static deleteReview(e) {
 
         const id = parseInt(e.target.dataset.id)
-        fetch(`http://localhost:3000/reviews/${id}`, {
-        // fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
+        // fetch(`http://localhost:3000/reviews/${id}`, {
+        fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
             method: 'DELETE'
         })
             .then(() => {
@@ -82,8 +82,8 @@ class Country {
             'likes': new_likes
         }
 
-        fetch(`http://localhost:3000/reviews/${id}`,{
-        // fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`,{
+        // fetch(`http://localhost:3000/reviews/${id}`,{
+        fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`,{
             method: "PATCH",
             headers: {
                 'Content-Type': 'application/json'
@@ -128,8 +128,8 @@ class Country {
                 'experience': updated_experience
             }
 
-            fetch(`http://localhost:3000/reviews/${id}`, {
-            // fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
+            // fetch(`http://localhost:3000/reviews/${id}`, {
+            fetch(`https://rails-api-destination-review.herokuapp.com/reviews/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'
