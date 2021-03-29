@@ -45,13 +45,14 @@ class Country {
             })
     }
 
-    changeColor(){
+    changeColor(event){
+        event.preventDefault()
         const id = parseInt(event.target.id)
         const originalColor = "#21f006"
-        document.getElementById(id).style.background = 'pink'
-        document.getElementById(id).addEventListener("click", e=> {
-            document.getElementById(id).style.background = originalColor
-        })
+        if(document.getElementById(id).style.background === 'pink'){
+            document.getElementById(id).style.background = "#21f006"
+        }
+        else{document.getElementById(id).style.background = "pink"}
     }
 
     check(){
